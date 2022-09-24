@@ -1,0 +1,114 @@
+
+
+* {
+  text-color: white;
+  background-color: transparent;
+}
+
+
+window {
+  padding: 1em;
+
+  border-color:  #7900FF;
+  border:       5px;
+  border-radius: 10px;
+
+  fullscreen: true;
+//  width:  1111px; 
+//  height: 720px;
+
+  background-color: #000000cc;
+}
+
+mainbox {
+  spacing: 0px;
+  children: [inputbar,wrapper-mode-switcher,listview];
+}
+
+element {
+  background: transparent;
+  children: [ element-icon, element-text ];
+}
+element,element-text,element-icon, button {
+    cursor: pointer;
+}
+
+inputbar {
+  margin: 0px 0px 0.5em 0em;
+  spacing: 0.2em;
+  children: [entry,overlay,case-indicator];
+}
+
+
+
+listview, inputbar, message {
+  padding: 0.5em;  
+  border-color: #7900FF;
+  border:        5px;
+  border-radius: 10px;
+  background-color: #000000cc;
+
+  columns: 6;
+  lines:   6;
+}
+listview {
+  border:       0px 5px 5px 5px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+
+element {
+    border:  0;
+    padding:      10px;
+    font:         "Fantasque Sans Mono Regular 11";
+    orientation: vertical;
+}
+element-icon {
+  size: 4em;
+  //  size: 80px;
+}
+
+element  selected {
+  border-color: #7900FF;
+  border:       5px;
+  border-radius: 10px;
+  background-color: #04293Acc;
+}
+
+element-text, element-icon {
+  font:             inherit; 
+  horizontal-align: 0.5;
+}
+
+wrapper-mode-switcher {
+    orientation: horizontal;
+
+    expand:     false;
+    spacing:    0;
+    children: [ mode-switcher ];
+}
+
+
+
+mode-switcher {
+    border:  0px;
+    spacing: 0px;
+    expand: true;
+}
+button {
+    text-color: white;
+    border:       0px 0px 5px ;
+    border-color: #7900FF;
+    border-radius:    10px 10px 0 0;
+    horizontal-align: 0.5;
+}
+button selected.normal {
+    text-color: white;
+    margin: 0px;
+    padding: 0px;
+
+    border:       5px 5px 0px ;
+    border-color: #7900FF;
+    border-radius:    10px 10px 0 0;
+}
+

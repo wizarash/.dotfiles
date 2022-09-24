@@ -1,0 +1,306 @@
+### AUTO START ###
+
+#rofi -show window set mod key (Mod1+<Alt>,Mod4=<Super>)
+set $mod Mod4
+
+# Set font
+#font pango:Fantasque Sans Mono Regular 11
+font pango:iosevka nerd font 10
+
+# Configure border style <normal|1pixel|pixel xx|none|pixel>
+default_border pixel 1
+default_floating_border normal
+
+# The combination of xss-lock, nm-applet and pactl is a popular choice, so they are included here as an example. Modify as you see fit.
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# Use pactl to adjust volume in PulseAudio.
+set $refresh_i3status killall -SIGUSR1 i3status
+
+# Display Wallpaper
+#exec_always feh --bg-scale ~/Pictures/Wallpapers/bg.png
+exec --no-startup-id nitrogen --restore
+ 
+# Start XDG autostart .desktop files using dex. See also
+# https://wiki.archlinux.org/index.php/XDG_Autostart
+#exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id xsettingsd &
+exec --no-startup-id acpilight
+exec --no-startup-id compton -b
+exec --no-startup-id gpaste
+exec --no-startup-id nm-applet
+
+# Auto start apps
+# exec --no-startup-id flatpak run net.cozic.joplin_desktop
+
+### KEYBINDINGS ###
+
+# start a terminal
+bindsym $mod+Return exec kitty
+# bindsym $mod+Return exec xfce4-terminal
+# bindsym $mod+k exec kitty
+
+# start dmenu or rofi
+#bindsym $mod+Shift+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec "rofi -modi drun,window,run,ssh -show drun"
+#bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -run-shell-command '{terminal} -e zsh -ic "{cmd} && read"'
+
+# change borders
+bindsym $mod+u border normal
+bindsym $mod+n border none
+
+# Change focus window:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+#bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# navigate workspaces next / previous
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7" 
+set $ws8 "8" 
+set $ws9 "9"  
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# resize window (you can also use the mouse for that)
+bindsym $mod+r mode "resize"
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        # with arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+# Set shut down, restart and locking features
+
+bindsym $mod+0 mode "$mode_system"
+
+set $Locker i3lock-fancy && sleep 1
+set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default" 
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
+    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+
+    # exit system mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# control screen-brightness
+bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
+
+# control volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Printscreen
+bindsym $mod+Print exec scrot
+bindsym --release $mod+Shift+Print exec scrot -s
+
+### WINDOW AND PANEL ####
+
+# Define colors variables:
+set $darkblue		#08052b
+set $lightblue		#5294e2
+set $urgentred	#e53935
+set $white		#ffffff
+set $black		#000000
+set $purple		#e345ff
+set $darkgrey		#383c4a
+set $grey		#b0b5bd
+set $mediumgrey	#8b8b8b
+set $yellowbrown	#e1b700
+set $bgbar		#2a2e33
+set $bgfonts		#3c3f42
+
+# define colors for windows:
+#class		        	border		bground		text		indicator	child_border
+client.focused		    $lightblue	$darkblue	$white		$purple		$mediumgrey
+client.unfocused	    $darkblue	$darkblue	$grey		$purple		$darkgrey
+client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
+client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
+
+# Open applications on specific workspaces
+assign [class="Joplin"] $ws9
+assign [class="discord"] $ws3
+assign [class="google-chrome-stable"] $ws2
+assign [class="firefox"] $ws2
+assign [class= "spotify"] $ws5
+
+# window rules, you can find the window class using xprop
+for_window [class=".*"] border pixel 2
+#assign [class=URxvt] 1
+#assign [class=Firefox|Transmission-gtk] 2
+#assign [class=Thunar|File-roller] 3
+#assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*] 4
+#assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 5
+assign [class=Lxappearance|System-config-printer.py|Lxtask|GParted|Pavucontrol|Exo-helper*|Lxrandr|Arandr] 6
+for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
+#for_window [class=URxvt|Firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
+#for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
+
+# panel
+bar {
+    status_command i3status -c ~/.config/i3status/i3status.conf 
+    position bottom
+
+    colors {
+    	separator	$bgbar
+   	background  	$bgbar
+    	statusline  	$white
+#                          	border 		        bg		txt		indicator
+	focused_workspace	$bgbar	  	 	$bgfonts	$white		$purple
+	active_workspace	$lightblue      	$bgfonts	$bgfonts	$purple
+	inactive_workspace	$bgbar   		$bgfonts	$grey		$purple
+	urgent_workspace	$urgentred	    	$urgentred	$white		$purple
+	}  
+}
+
+
+
+# hide/unhide bar
+bindsym $mod+m bar mode toggle
+
+### GAPS ####
+
+# Set inner/outer gaps
+gaps inner 4
+gaps outer 1
+
+# Additionally, you can issue commands with the following syntax. This is useful to keys to changing the gap size.
+# gaps inner|outer current|all set|plus|minus <px>
+# gaps inner all set 10
+# gaps outer all plus 5
+
+# Smart gaps (gaps used if only more than one container on the workspace)
+smart_gaps on
+
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
+# on|no_gaps (on=always activate and no_gaps=only activate if the gaps size to the edge of screen is 0)
+smart_borders on
+
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+	bindsym o	mode "$mode_gaps_outer"
+	bindsym i	mode "$mode_gaps_inner"
+	bindsym Return	mode "default"
+	bindsym Escape	mode "default"
+}
+
+mode "$mode_gaps_inner" {
+	bindsym plus  gaps inner current plus 5
+	bindsym minus gaps inner current minus 5
+	bindsym 0     gaps inner current set 0
+
+	bindsym Shift+plus  gaps inner all plus 5
+	bindsym Shift+minus gaps inner all minus 5
+	bindsym Shift+0     gaps inner all set 0
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+	bindsym plus  gaps outer current plus 5
+	bindsym minus gaps outer current minus 5
+	bindsym 0     gaps outer current set 0
+
+	bindsym Shift+plus  gaps outer all plus 0
+	bindsym Shift+minus gaps outer all minus 0
+	bindsym Shift+0     gaps outer all set 0
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
