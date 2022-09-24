@@ -111,4 +111,4 @@ alias v="nvim"
 alias c="clear"
 
 alias g="git"
-
+alias graph="git log --all --decorate --oneline --graph"
