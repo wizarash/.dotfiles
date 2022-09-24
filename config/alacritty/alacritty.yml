@@ -1,0 +1,20 @@
+# configuration for alacritty
+import :
+- ~/.config/alacritty/colors/dracula.yaml
+- ~/.config/alacritty/font.yaml
+window:
+  opacity: 0.9
+# dynamic_padding: true
+  padding:
+    x: 0
+    y: 0
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+  save_to_clipboard: true
+
+cursor:
+  style: Underline
+
+live_config_reload: true
+draw_bold_text_with_bright_colors: true
