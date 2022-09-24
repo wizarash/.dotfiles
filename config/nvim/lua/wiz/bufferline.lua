@@ -7,7 +7,7 @@ require('bufferline').setup{
                   text_align = 'left',
                   highlight = "Directory",
                   separator = true } },
-    always_show_bufferline = true,
+    always_show_bufferline = false,
     show_buffer_close_icons = true,
     show_close_icon = false,
     close_command = "bdelete! %d",
