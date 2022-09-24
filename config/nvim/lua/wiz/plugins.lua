@@ -46,16 +46,10 @@ return packer.startup(function(use)
   use 'nvim-lua/plenary.nvim' -- Useful lua functions used by lots of plugins
   use 'goolord/alpha-nvim' --  Dashboard
   use 'nvim-lualine/lualine.nvim' -- Statusline
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'} 
+  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'} 
   use 'windwp/nvim-autopairs' -- Autopairs, integrates with both cmp and treesitter
   -- nvim-tree
-  use {
-  'kyazdani42/nvim-tree.lua',
-  requires = {
-    'kyazdani42/nvim-web-devicons', -- optional, for file icons
-  },
-  tag = 'nightly' -- optional, updated every week. (see issue #1193)
-}  
+  use 'kyazdani42/nvim-tree.lua' -- for file explorer
  
 
 
