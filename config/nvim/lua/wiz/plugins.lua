@@ -48,10 +48,13 @@ return packer.startup(function(use)
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'} 
   use 'windwp/nvim-autopairs' -- Autopairs, integrates with both cmp and treesitter
+  use 'ahmedkhalf/project.nvim' -- provides project management
+  use 'akinsho/toggleterm.nvim' -- persist and toggle multiple terminals
   -- nvim-tree
   use 'kyazdani42/nvim-tree.lua' -- for file explorer
- 
 
+  -- Telescope
+  use 'nvim-telescope/telescope.nvim'
 
   -- Treesitter
   --use 'nvim-treesitter/nvim-treesitter'
