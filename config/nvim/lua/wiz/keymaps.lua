@@ -26,6 +26,9 @@ keymap("n", "<A-s>", "<C-w>j", opts)
 keymap("n", "<A-w>", "<C-w>k", opts)
 keymap("n", "<A-d>", "<C-w>l", opts)
 
+-- Save file
+keymap('n', '<leader>w', '<ESC>:update<CR>')
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
