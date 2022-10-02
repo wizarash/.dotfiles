@@ -19,8 +19,11 @@ ts.setup {
     "yaml",
     "css",
     "html",
-    "lua"
+    "lua",
+    "python",
+    "javascript"
   },
+  auto_install = true,
   autotag = {
     enable = true,
   },

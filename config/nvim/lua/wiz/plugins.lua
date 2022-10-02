@@ -51,9 +51,14 @@ return packer.startup(function(use)
   use 'ahmedkhalf/project.nvim' -- provides project management
   use 'akinsho/toggleterm.nvim' -- persist and toggle multiple terminals
   use 'numToStr/Comment.nvim'
+  use 'lukas-reineke/indent-blankline.nvim' --Indent guides
+  use 'lewis6991/impatient.nvim' -- Improve startup time
 
   -- nvim-tree
   use 'kyazdani42/nvim-tree.lua' -- for file explorer
+
+  -- Coc
+  --use {'neoclide/coc.nvim', branch = 'release'} -- :CocInstall coc-emmet
 
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
@@ -67,10 +72,30 @@ return packer.startup(function(use)
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
 
-  --Dap
+  --Dap 
   use 'mfussenegger/nvim-dap'
   use 'rcarriga/nvim-dap-ui'
   use 'ravenxrz/DAPInstall.nvim'
+
+  -- LSP
+  use 'neovim/nvim-lspconfig' -- enable LSP
+  use 'williamboman/nvim-lsp-installer' -- simple to use language server installer
+  use 'jose-elias-alvarez/null-ls.nvim' -- for formatters and linters
+  use 'glepnir/lspsaga.nvim' -- LSP UIs 
+  use 'RRethy/vim-illuminate'
+
+    -- Colorschemes
+  use 'folke/tokyonight.nvim'
+  use 'lunarvim/darkplus.nvim'
+  use 'EdenEast/nightfox.nvim'
+
+  -- cmp plugins
+  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/cmp-buffer" -- buffer completions
+  use "hrsh7th/cmp-path" -- path completions
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/cmp-nvim-lsp" -- nvim-cmp source for neovim's built-in LSP
+  use "hrsh7th/cmp-nvim-lua"
 
     -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
