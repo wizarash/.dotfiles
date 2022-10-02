@@ -101,6 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 # Aliases
+alias s="clear"
+alias x="exit"
+
 alias l="exa --grid --icons"
 alias ls="exa --grid --icons"
 alias ll="exa --grid -al --icons"
@@ -108,7 +111,7 @@ alias la="exa --grid -a --icons"
 
 alias v="nvim"
 
-alias c="clear"
-
 alias g="git"
 alias graph="git log --all --decorate --oneline --graph"
+
+alias tm="tmux"
