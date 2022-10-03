@@ -1,13 +1,39 @@
-# configuration for alacritty
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+# Import additional configuration files
 import :
-- ~/.config/alacritty/colors/dracula.yaml
-- ~/.config/alacritty/font.yaml
+- ~/.config/alacritty/colors/ayu_dark.yaml
+- ~/.config/alacritty/fonts/font.yaml
+
+# TERM variable
+TERM: alacritty
+
 window:
+  dimensions:
+    columns: 0
+    lines: 0
+
+  position:
+    x: 0
+    y: 0
+
   opacity: 0.9
-# dynamic_padding: true
+
   padding:
     x: 0
     y: 0
+  dynamic_padding: false
+
+  decorations: none #values: full/none
+
+  startup_mode: Windowed #values: Windowed/Maximized/Fullscreen
+
+  #title: Alacritty
+
+  dynamic_title: true
+
+  decorations_theme_variant: dark #values: dark/light/None
+
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

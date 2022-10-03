@@ -115,3 +115,5 @@ alias g="git"
 alias graph="git log --all --decorate --oneline --graph"
 
 alias tm="tmux"
+
+alias luamake=/home/wiz/lua-language-server/3rd/luamake/luamake
