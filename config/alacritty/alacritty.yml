@@ -2,7 +2,7 @@
 
 # Import additional configuration files
 import :
-- ~/.config/alacritty/colors/ayu_dark.yaml
+- ~/.config/alacritty/colors/normal_dark.yaml
 - ~/.config/alacritty/fonts/font.yaml
 
 # TERM variable
