@@ -53,8 +53,7 @@ return packer.startup(function(use)
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
 
-  -- # file explorer
-  use { "nvim-neo-tree/neo-tree.nvim"} 
+  --use { "nvim-neo-tree/neo-tree.nvim"} 
   --  use {  "MunifTanjim/nui.nvim" }
     --}
   --}
@@ -65,8 +64,10 @@ return packer.startup(function(use)
   -- # bufferline
   use { 'akinsho/nvim-bufferline.lua' }
 
-  -- # Icons
-  use { 'kyazdani42/nvim-web-devicons' }
+  -- # nvim-tree
+  use { 'kyazdani42/nvim-tree.lua',
+  requires = { 'kyazdani42/nvim-web-devicons' },
+}
 
   -- # telescope
   --use { 'nvim-telescope/telescope.nvim' }
@@ -74,7 +75,9 @@ return packer.startup(function(use)
 
   --use { 'windwp/nvim-autopairs' }
   --use { 'windwp/nvim-ts-autotag' }
-  --use { 'norcalli/nvim-colorizer.lua' }
+  --
+  -- # colorizer
+  use { 'norcalli/nvim-colorizer.lua' }
 
   -- # zen-mode
   use { 'folke/zen-mode.nvim' }
