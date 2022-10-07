@@ -52,6 +52,10 @@ return packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
+
+  -- # dashboard
+  use {'glepnir/dashboard-nvim'}
+
   -- # neo-tree
   use { "nvim-neo-tree/neo-tree.nvim"} 
     use {  "MunifTanjim/nui.nvim" }
@@ -69,7 +73,7 @@ return packer.startup(function(use)
   use { 'kyazdani42/nvim-web-devicons' }
 
   -- # telescope
-  --use { 'nvim-telescope/telescope.nvim' }
+  use { 'nvim-telescope/telescope.nvim' }
   --use { 'nvim-telescope/telescope-file-browser.nvim' }
 
   --use { 'windwp/nvim-autopairs' }
