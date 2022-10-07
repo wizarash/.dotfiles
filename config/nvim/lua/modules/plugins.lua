@@ -82,7 +82,7 @@ return packer.startup(function(use)
   use { 'folke/zen-mode.nvim' }
   
   -- # markdown preview
-  --use { "iamcco/markdown-preview.nvim" }
+use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
   -- # LSP
   --use { 'neovim/nvim-lspconfig' }
