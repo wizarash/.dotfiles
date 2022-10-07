@@ -47,8 +47,8 @@ map('n', '<leader>qq', '<ESC>:quit<CR>')
 -- ###################################
 
 -- neo-tree
---map('n', '<leader>e', ':NeoTreeRevealToggle<CR>')
-map('n', '<leader>e', ':NeoTreeFloatToggle<CR>')
+map('n', '<leader>e', ':NeoTreeRevealToggle<CR>')
+--map('n', '<leader>e', ':NeoTreeFloatToggle<CR>')
 
 -- zen mode
 map('n', '<leader>z', ':ZenMode<CR>')

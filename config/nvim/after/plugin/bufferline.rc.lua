@@ -5,6 +5,14 @@ bufferline.setup({
   options = {
     mode = "buffer",
     separator_style = 'thick',
+        offsets = {
+                {
+                    filetype = "neo-tree",
+                    text = "File Explorer",
+                    highlight = "Directory",
+                    text_align = "left"
+                }
+            },
     always_show_bufferline = true,
     show_buffer_close_icons = false,
     show_close_icon = false,

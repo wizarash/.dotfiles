@@ -109,6 +109,7 @@ use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = fun
   --use {'svrana/neosolarized.nvim', requires = { 'tjdevries/colorbuddy.nvim' }
   --}
   --use { 'lalitmee/cobalt2.nvim', requires = 'tjdevries/colorbuddy.nvim' }
+  use 'navarasu/onedark.nvim'
 
 
 end)
