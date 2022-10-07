@@ -52,12 +52,10 @@ return packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
-
-  --use { "nvim-neo-tree/neo-tree.nvim"} 
-  --  use {  "MunifTanjim/nui.nvim" }
-    --}
-  --}
-
+  -- # neo-tree
+  use { "nvim-neo-tree/neo-tree.nvim"} 
+    use {  "MunifTanjim/nui.nvim" }
+    
   -- # statusline
   use { 'nvim-lualine/lualine.nvim' }
 
@@ -65,9 +63,10 @@ return packer.startup(function(use)
   use { 'akinsho/nvim-bufferline.lua' }
 
   -- # nvim-tree
-  use { 'kyazdani42/nvim-tree.lua',
-  requires = { 'kyazdani42/nvim-web-devicons' },
-}
+  --use { 'kyazdani42/nvim-tree.lua' }
+
+  -- # icons
+  use { 'kyazdani42/nvim-web-devicons' }
 
   -- # telescope
   --use { 'nvim-telescope/telescope.nvim' }
@@ -100,8 +99,8 @@ return packer.startup(function(use)
   --use { 'hrsh7th/cmp-buffer' }
 
   -- # Git
-  --use { 'dinhhuy258/git.nvim' }
-  --use { 'lewis6991/gitsigns.nvim' }
+  use { 'dinhhuy258/git.nvim' }
+  use { 'lewis6991/gitsigns.nvim' }
 
   -- # snip
   --use { 'L3MON4D3/LuaSnip' }
