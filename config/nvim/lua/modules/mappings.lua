@@ -52,3 +52,6 @@ map('n', '<leader>e', ':NeoTreeRevealToggle<CR>')
 
 -- zen mode
 map('n', '<leader>z', ':ZenMode<CR>')
+
+-- telescope
+--map('n', '<leader>', ':Telescope <CR>'>
