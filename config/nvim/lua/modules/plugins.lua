@@ -74,11 +74,21 @@ return packer.startup(function(use)
 
   -- # telescope
   use { 'nvim-telescope/telescope.nvim' }
-  --use { 'nvim-telescope/telescope-file-browser.nvim' }
+  use { 'nvim-telescope/telescope-file-browser.nvim' }
 
+  -- # comment
+  use { 'numToStr/Comment.nvim' }
+
+  -- indentline
+  use { "lukas-reineke/indent-blankline.nvim" }
+
+  -- # autopairs
   --use { 'windwp/nvim-autopairs' }
   --use { 'windwp/nvim-ts-autotag' }
-  --
+  
+  -- terminal
+  use { "akinsho/toggleterm.nvim" }
+
   -- # colorizer
   use { 'norcalli/nvim-colorizer.lua' }
 
@@ -86,7 +96,7 @@ return packer.startup(function(use)
   use { 'folke/zen-mode.nvim' }
   
   -- # markdown preview
-use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+use{ "iamcco/markdown-preview.nvim" }
 
   -- # LSP
   --use { 'neovim/nvim-lspconfig' }

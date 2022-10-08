@@ -57,6 +57,12 @@ map('n', '<leader>e', ':NeoTreeRevealToggle<CR>')
 map('n', '<leader>z', ':ZenMode<CR>')
 
 -- colorizer
-map ('n', '<leader>c' , ':ColorizerToggle<CR>')
+--map ('n', '<leader>c' , ':ColorizerToggle<CR>')
+
+-- markdown preview
+map('n', '<leader>m' ,':MarkdownPreviewToggle<CR>')
+
 -- telescope
---map('n', '<leader>', ':Telescope <CR>'>
+map('n', '<leader>fb', ':Telescope file_browser<CR>')
+map('n', '<leader>ff', ':Telescope find_files find_command=rg,--hidden,--files<CR>')
+map('n', '<leader>fw', ':Telescope live_grep<CR>')
