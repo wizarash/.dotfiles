@@ -4,7 +4,7 @@ if (not status) then return end
 bufferline.setup({
   options = {
     mode = "buffer",
-    separator_style = 'slant',
+    separator_style = 'thin',  -- change: slant, thick, thin
         offsets = {
                 {
                     filetype = "neo-tree",

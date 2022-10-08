@@ -39,6 +39,9 @@ map("n", "<leader>h", "<cmd>nohlsearch<CR>")
 -- Save file
 map("n", "<C-w>", '<ESC>:update<CR>')
 
+-- reload
+map('n', '<C-r>', '<:source %<CR>')
+
 -- Close neovim
 map('n', '<leader>qq', '<ESC>:quit<CR>')
 
@@ -53,5 +56,7 @@ map('n', '<leader>e', ':NeoTreeRevealToggle<CR>')
 -- zen mode
 map('n', '<leader>z', ':ZenMode<CR>')
 
+-- colorizer
+map ('n', '<leader>c' , ':ColorizerToggle<CR>')
 -- telescope
 --map('n', '<leader>', ':Telescope <CR>'>
