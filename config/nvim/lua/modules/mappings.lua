@@ -39,9 +39,6 @@ map("n", "<leader>h", "<cmd>nohlsearch<CR>")
 -- Save file
 map("n", "<C-w>", '<ESC>:update<CR>')
 
--- reload
-map('n', '<C-r>', '<:source %<CR>')
-
 -- Close neovim
 map('n', '<leader>qq', '<ESC>:quit<CR>')
 
@@ -66,3 +63,4 @@ map('n', '<leader>m' ,':MarkdownPreviewToggle<CR>')
 map('n', '<leader>fb', ':Telescope file_browser<CR>')
 map('n', '<leader>ff', ':Telescope find_files find_command=rg,--hidden,--files<CR>')
 map('n', '<leader>fw', ':Telescope live_grep<CR>')
+map('n', '<leader>ro', ':Telescope oldfiles<CR>')

@@ -13,14 +13,14 @@ local nvim = {
 db.default_banner = nvim
 
 db.header_pad = 3           -- number type default is 1
-db.center_pad = 2           -- number type default is 1
+db.center_pad = 3           -- number type default is 1
 db.footer_pad = 2           -- number type default is 1
 
 db.custom_center = {
       {icon = '  ',
       desc = 'Recently opened files                   ',
       action =  'Telescope oldfiles',
-      shortcut = 'SPC f h'},
+      shortcut = 'SPC r o'},
       {icon = '  ',
       desc = 'File Browser                            ',
       action =  'Telescope file_browser',

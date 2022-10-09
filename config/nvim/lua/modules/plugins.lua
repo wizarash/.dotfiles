@@ -59,7 +59,7 @@ return packer.startup(function(use)
   -- # neo-tree
   use { "nvim-neo-tree/neo-tree.nvim"} 
     use {  "MunifTanjim/nui.nvim" }
-    
+
   -- # statusline
   use { 'nvim-lualine/lualine.nvim' }
 
@@ -85,18 +85,18 @@ return packer.startup(function(use)
   -- # autopairs
   --use { 'windwp/nvim-autopairs' }
   --use { 'windwp/nvim-ts-autotag' }
-  
+
   -- terminal
   use { "akinsho/toggleterm.nvim" }
 
   -- # colorizer
-  use { 'norcalli/nvim-colorizer.lua' }
+  use { 'NvChad/nvim-colorizer.lua' }
 
   -- # zen-mode
   use { 'folke/zen-mode.nvim' }
-  
+
   -- # markdown preview
-use{ "iamcco/markdown-preview.nvim" }
+  use{ "iamcco/markdown-preview.nvim" }
 
   -- # LSP
   --use { 'neovim/nvim-lspconfig' }
@@ -120,10 +120,8 @@ use{ "iamcco/markdown-preview.nvim" }
   --use { 'L3MON4D3/LuaSnip' }
 
   -- # colorscheme
-  --use {'svrana/neosolarized.nvim', requires = { 'tjdevries/colorbuddy.nvim' }
-  --}
-  --use { 'lalitmee/cobalt2.nvim', requires = 'tjdevries/colorbuddy.nvim' }
-  use 'navarasu/onedark.nvim'
+-- use {'navarasu/onedark.nvim' }
+  use { "themercorp/themer.lua" }
 
 
 end)
