@@ -47,8 +47,8 @@ map('n', '<leader>qq', '<ESC>:quit<CR>')
 -- ###################################
 
 -- neo-tree
-map('n', '<leader>e', ':NeoTreeRevealToggle<CR>')
---map('n', '<leader>e', ':NeoTreeFloatToggle<CR>')
+map('n', '<leader>E', ':NeoTreeRevealToggle<CR>')
+map('n', '<leader>e', ':Neotree float reveal toggle<CR>')
 
 -- zen mode
 map('n', '<leader>z', ':ZenMode<CR>')
@@ -64,3 +64,4 @@ map('n', '<leader>fb', ':Telescope file_browser<CR>')
 map('n', '<leader>ff', ':Telescope find_files find_command=rg,--hidden,--files<CR>')
 map('n', '<leader>fw', ':Telescope live_grep<CR>')
 map('n', '<leader>ro', ':Telescope oldfiles<CR>')
+map('n', '<leader>fk', ':Telescope keymaps<CR>')

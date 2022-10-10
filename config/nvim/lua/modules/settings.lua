@@ -42,23 +42,24 @@ opt.wildignore:append { '*/node_modules/*' }
 -- Hightlight
 opt.cursorline = true
 opt.termguicolors = true
+opt.guicursor = 'a:block'
 opt.winblend = 0
 opt.wildoptions = 'pum'
 opt.pumblend = 5
-opt.background = 'dark'
+-- opt.background = 'dark'
 
 -- Undercurl
 cmd([[let &t_Cs = "\e[4:3m"]])
 cmd([[let &t_Ce = "\e[4:0m"]])
 
 -- Turn off paste mode when leaving insert
-vim.api.nvim_create_autocmd("InsertLeave", {
-  pattern = '*',
-  command = "set nopaste"
-})
+-- vim.api.nvim_create_autocmd("InsertLeave", {
+--   pattern = '*',
+--   command = "set nopaste"
+-- })
 
 -- Add asterisks in block comments
-opt.formatoptions:append { 'r' }
+-- opt.formatoptions:append { 'r' }
 
 
 --vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp

@@ -1,8 +1,8 @@
 local fn = vim.fn
 
 -- Automatically install packer
-  local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
-  if fn.empty(fn.glob(install_path)) > 0 then
+local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system {
     "git",
     "clone",
@@ -18,8 +18,8 @@ end
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
   augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  autocmd!
+  autocmd BufWritePost plugins.lua source <afile> | PackerSync
   augroup end
 ]]
 
@@ -42,61 +42,45 @@ packer.init {
 return packer.startup(function(use)
 
   -- # plugin manager
-  use({ "wbthomason/packer.nvim" })
+  use{ "wbthomason/packer.nvim" }
 
   -- # stdlib
-  use({ "nvim-lua/plenary.nvim" })
+  use{ "nvim-lua/plenary.nvim" }
 
-  -- # treesitter
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-  }
+  -- # treesitter  -- before this on fedora install tree-sitter-cli
+  use { 'nvim-treesitter/nvim-treesitter', run = function() require('nvim-treesitter.install').update({ with_sync = true }) end, }
+  use { 'nvim-treesitter/nvim-treesitter-refactor' }
+  use { 'nvim-treesitter/nvim-treesitter-context' }
 
-  -- # dashboard
-  use {'glepnir/dashboard-nvim'}
+    -- # User Interface
+  use { 'kyazdani42/nvim-web-devicons' } -- Icons
+  use { 'glepnir/dashboard-nvim' } -- Dashboard
+  use { 'nvim-neo-tree/neo-tree.nvim', requires =  'MunifTanjim/nui.nvim' } -- neo-tree
+  use { 'nvim-lualine/lualine.nvim' } -- statusline
+  use { 'akinsho/nvim-bufferline.lua' } -- bufferline
+  use { 'lukas-reineke/indent-blankline.nvim' } -- indentline
+  use { 'NvChad/nvim-colorizer.lua' } -- colorizer
+  use { 'themercorp/themer.lua' }  -- colorscheme
 
-  -- # neo-tree
-  use { "nvim-neo-tree/neo-tree.nvim"} 
-    use {  "MunifTanjim/nui.nvim" }
-
-  -- # statusline
-  use { 'nvim-lualine/lualine.nvim' }
-
-  -- # bufferline
-  use { 'akinsho/nvim-bufferline.lua' }
-
-  -- # nvim-tree
-  --use { 'kyazdani42/nvim-tree.lua' }
-
-  -- # icons
-  use { 'kyazdani42/nvim-web-devicons' }
-
-  -- # telescope
-  use { 'nvim-telescope/telescope.nvim' }
-  use { 'nvim-telescope/telescope-file-browser.nvim' }
+  -- # autopairs
+  use { 'windwp/nvim-autopairs' }
+  use { 'windwp/nvim-ts-autotag' }
 
   -- # comment
   use { 'numToStr/Comment.nvim' }
 
-  -- indentline
-  use { "lukas-reineke/indent-blankline.nvim" }
-
-  -- # autopairs
-  --use { 'windwp/nvim-autopairs' }
-  --use { 'windwp/nvim-ts-autotag' }
-
-  -- terminal
-  use { "akinsho/toggleterm.nvim" }
-
-  -- # colorizer
-  use { 'NvChad/nvim-colorizer.lua' }
+  -- # Terminal
+  use { 'akinsho/toggleterm.nvim' }
 
   -- # zen-mode
   use { 'folke/zen-mode.nvim' }
 
+  -- # Fuzzy finder
+  use { 'nvim-telescope/telescope.nvim' }
+  use { 'nvim-telescope/telescope-file-browser.nvim' }
+
   -- # markdown preview
-  use{ "iamcco/markdown-preview.nvim" }
+  --use{ "iamcco/markdown-preview.nvim" }
 
   -- # LSP
   --use { 'neovim/nvim-lspconfig' }
@@ -116,12 +100,7 @@ return packer.startup(function(use)
   use { 'dinhhuy258/git.nvim' }
   use { 'lewis6991/gitsigns.nvim' }
 
-  -- # snip
+  -- #
   --use { 'L3MON4D3/LuaSnip' }
-
-  -- # colorscheme
--- use {'navarasu/onedark.nvim' }
-  use { "themercorp/themer.lua" }
-
 
 end)

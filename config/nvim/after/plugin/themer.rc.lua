@@ -2,13 +2,13 @@ local status, themer = pcall(require, 'themer')
 if (not status) then return end
 
 themer.setup {
-  colorscheme = "dracula", -- <:COLORSCROLL> 
+  colorscheme = "gruvbox-material-dark-medium", -- <:COLORSCROLL> 
   transparent = false,
   term_colors = true,
   dim_inactive = false,
   disable_telescope_themes = {},
   styles = {
-    eading = {
+    heading = {
       h1 = {},
       h2 = {},
     },

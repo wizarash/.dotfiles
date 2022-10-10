@@ -1,7 +1,12 @@
 #background-transparency
-background_opacity 1.0
+background_opacity 0.9
 font_size 13
 
+linux_display_server x11
+hide_window_decorations yes
+
 # BEGIN_KITTY_THEME
+# Default
 include current-theme.conf
 # END_KITTY_THEME
+#
