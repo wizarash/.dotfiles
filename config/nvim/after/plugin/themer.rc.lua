@@ -2,7 +2,7 @@ local status, themer = pcall(require, 'themer')
 if (not status) then return end
 
 themer.setup {
-  colorscheme = "gruvbox-material-dark-medium", -- <:COLORSCROLL> 
+  colorscheme = "scery", -- <:COLORSCROLL> 
   transparent = false,
   term_colors = true,
   dim_inactive = false,

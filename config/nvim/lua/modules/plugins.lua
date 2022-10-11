@@ -41,66 +41,63 @@ packer.init {
 -- Plugins list
 return packer.startup(function(use)
 
-  -- # plugin manager
+  -- plugin manager
   use{ "wbthomason/packer.nvim" }
-
-  -- # stdlib
+  -- stdlib
   use{ "nvim-lua/plenary.nvim" }
-
-  -- # treesitter  -- before this on fedora install tree-sitter-cli
+  -- treesitter  -- (before this on fedora install tree-sitter-cli and )
   use { 'nvim-treesitter/nvim-treesitter', run = function() require('nvim-treesitter.install').update({ with_sync = true }) end, }
   use { 'nvim-treesitter/nvim-treesitter-refactor' }
   use { 'nvim-treesitter/nvim-treesitter-context' }
-
-    -- # User Interface
-  use { 'kyazdani42/nvim-web-devicons' } -- Icons
-  use { 'glepnir/dashboard-nvim' } -- Dashboard
-  use { 'nvim-neo-tree/neo-tree.nvim', requires =  'MunifTanjim/nui.nvim' } -- neo-tree
-  use { 'nvim-lualine/lualine.nvim' } -- statusline
-  use { 'akinsho/nvim-bufferline.lua' } -- bufferline
-  use { 'lukas-reineke/indent-blankline.nvim' } -- indentline
-  use { 'NvChad/nvim-colorizer.lua' } -- colorizer
-  use { 'themercorp/themer.lua' }  -- colorscheme
-
-  -- # autopairs
+  -- Dashboard
+  use { 'glepnir/dashboard-nvim' }
+  -- Icon
+  use { 'kyazdani42/nvim-web-devicons' }
+  -- Neo-tree
+  use { 'nvim-neo-tree/neo-tree.nvim', requires =  'MunifTanjim/nui.nvim' }
+  -- Lualine
+  use { 'nvim-lualine/lualine.nvim' }
+  -- Bufferline
+  use { 'akinsho/nvim-bufferline.lua' }
+  -- Indentline
+  use { 'lukas-reineke/indent-blankline.nvim' }
+  -- Colorizer
+  use { 'NvChad/nvim-colorizer.lua' }
+  -- Colorscheme
+  use { 'themercorp/themer.lua' }
+  -- autopairs
   use { 'windwp/nvim-autopairs' }
   use { 'windwp/nvim-ts-autotag' }
-
-  -- # comment
+  -- comment
   use { 'numToStr/Comment.nvim' }
-
-  -- # Terminal
+  -- # Toggle terminal
   use { 'akinsho/toggleterm.nvim' }
-
-  -- # zen-mode
-  use { 'folke/zen-mode.nvim' }
-
-  -- # Fuzzy finder
-  use { 'nvim-telescope/telescope.nvim' }
-  use { 'nvim-telescope/telescope-file-browser.nvim' }
-
-  -- # markdown preview
-  --use{ "iamcco/markdown-preview.nvim" }
-
-  -- # LSP
-  --use { 'neovim/nvim-lspconfig' }
-  --use { 'onsails/lspkind-nvim' }
-  --use { 'williamboman/mason.nvim' }
+  -- LSP
+  use { 'neovim/nvim-lspconfig' }
+  use { 'onsails/lspkind.nvim' }
+  use { 'williamboman/mason.nvim' }
   --use { 'williamboman/mason-lspconfig.nvim' }
   --use { 'jose-elias-alvarez/null-ls.nvim' }
   --use { 'glepnir/lspsaga.nvim' }
   --use { 'MunifTanjim/prettier.nvim' }
-
-  -- # Completion
-  --use { 'hrsh7th/nvim-cmp' }
-  --use { 'hrsh7th/cmp-nvim-lsp' }
-  --use { 'hrsh7th/cmp-buffer' }
+  -- Snippet
+  use { 'L3MON4D3/LuaSnip' }
+  -- Completions
+  use { 'hrsh7th/nvim-cmp' }
+  use { 'hrsh7th/cmp-path' }
+  use { 'hrsh7th/cmp-nvim-lsp' }
+  use { 'hrsh7th/cmp-buffer' }
+  -- Telescope
+  use { 'nvim-telescope/telescope.nvim' }
+  use { 'nvim-telescope/telescope-file-browser.nvim' }
 
   -- # Git
   use { 'dinhhuy258/git.nvim' }
   use { 'lewis6991/gitsigns.nvim' }
+ 
+  -- # zen-mode
+  use { 'folke/zen-mode.nvim' }
 
-  -- #
-  --use { 'L3MON4D3/LuaSnip' }
-
+  -- # markdown preview
+  --use{ "iamcco/markdown-preview.nvim" }
 end)
