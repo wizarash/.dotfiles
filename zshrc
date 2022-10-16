@@ -123,5 +123,7 @@ alias r="ranger"
 alias luamake=/home/wiz/lua-language-server/3rd/luamake/luamake
 
 alias fetch='neofetch'
+
+alias music='ncmpcpp'
 ## default 
 export EDITOR=nvim
