@@ -45,7 +45,7 @@ return packer.startup(function(use)
   use{ "wbthomason/packer.nvim" }
   -- stdlib
   use{ "nvim-lua/plenary.nvim" }
-  -- treesitter  -- (before this on fedora install tree-sitter-cli and )
+  -- treesitter  -- (before this on fedora install tree-sitter-cli and libstdc++ or gcc-c++)
   use { 'nvim-treesitter/nvim-treesitter', run = function() require('nvim-treesitter.install').update({ with_sync = true }) end, }
   use { 'nvim-treesitter/nvim-treesitter-refactor' }
   use { 'nvim-treesitter/nvim-treesitter-context' }
@@ -65,6 +65,7 @@ return packer.startup(function(use)
   use { 'NvChad/nvim-colorizer.lua' }
   -- Colorscheme
   use { 'themercorp/themer.lua' }
+  -- use { 'glepnir/zephyr-nvim' }
   -- autopairs
   use { 'windwp/nvim-autopairs' }
   use { 'windwp/nvim-ts-autotag' }
@@ -76,9 +77,9 @@ return packer.startup(function(use)
   use { 'neovim/nvim-lspconfig' }
   use { 'onsails/lspkind.nvim' }
   use { 'williamboman/mason.nvim' }
-  --use { 'williamboman/mason-lspconfig.nvim' }
+  use { 'williamboman/mason-lspconfig.nvim' }
   --use { 'jose-elias-alvarez/null-ls.nvim' }
-  --use { 'glepnir/lspsaga.nvim' }
+  use { 'glepnir/lspsaga.nvim' }
   --use { 'MunifTanjim/prettier.nvim' }
   -- Snippet
   use { 'L3MON4D3/LuaSnip' }
@@ -99,5 +100,10 @@ return packer.startup(function(use)
   use { 'folke/zen-mode.nvim' }
 
   -- # markdown preview
-  --use{ "iamcco/markdown-preview.nvim" }
+  --
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+  use {"ellisonleao/glow.nvim"}
 end)

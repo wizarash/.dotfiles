@@ -118,6 +118,10 @@ alias v="nvim"
 alias g="git"
 alias graph="git log --all --decorate --oneline --graph"
 
-alias tm="tmux"
+alias r="ranger"
 
 alias luamake=/home/wiz/lua-language-server/3rd/luamake/luamake
+
+alias fetch='neofetch'
+## default 
+export EDITOR=nvim
