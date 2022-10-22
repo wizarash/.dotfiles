@@ -22,7 +22,7 @@ opt.showcmd = true                          --
 opt.cmdheight = 1                           -- more space in the neovim command line for displaying messages
 opt.laststatus = 3                          --
 
-opt.wrap = false                            -- no wrap lines
+opt.wrap = true                            -- no wrap lines
 opt.ai = true                               -- auto indent
 opt.si = true                               -- smart Indent
 opt.smarttab = true                         -- 

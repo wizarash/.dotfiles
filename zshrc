@@ -105,8 +105,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 # Aliases
-alias s="clear"
-alias x="exit"
+alias c="clear"
+alias q="exit"
 
 alias l="exa --grid --icons"
 alias ls="exa --grid --icons"
@@ -119,8 +119,6 @@ alias g="git"
 alias graph="git log --all --decorate --oneline --graph"
 
 alias r="ranger"
-
-alias luamake=/home/wiz/lua-language-server/3rd/luamake/luamake
 
 alias fetch='neofetch'
 
