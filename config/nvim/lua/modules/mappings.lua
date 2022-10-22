@@ -36,6 +36,9 @@ map("n", "<leader>wq", "<cmd>bdelete!<CR>") -- close buffer
 -- Clear highlights
 map("n", "<leader>h", "<cmd>nohlsearch<CR>")
 
+-- no wrap
+map("n", "<C-z>", ":set nowrap<CR>")
+
 -- Save file
 map("n", "<C-w>", '<ESC>:update<CR>')
 

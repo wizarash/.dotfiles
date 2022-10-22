@@ -4,43 +4,39 @@
 import :
 - ~/.config/alacritty/colors/normal_dark.yaml
 - ~/.config/alacritty/fonts/font.yaml
+## Set environment variables
+env:
+  TERM: alacritty
+  WINIT_X11_SCALE_FACTOR: '1.0'
 
-# TERM variable
-TERM: alacritty
-
+## Terminal window settings
 window:
   dimensions:
-    columns: 0
-    lines: 0
-
-  position:
-    x: 0
-    y: 0
-
-  opacity: 1.0
+    columns: 84
+    lines: 24
 
   padding:
     x: 0
     y: 0
-  dynamic_padding: false
 
-  decorations: none #values: full/none
-
-  startup_mode: Windowed #values: Windowed/Maximized/Fullscreen
-
-  #title: Alacritty
-
+  decorations: none
+  startup_mode: Windowed
   dynamic_title: true
 
-  decorations_theme_variant: dark #values: dark/light/None
+## scrolling
+  history: 10000
+  multiplier: 3
 
+## Background opacity
+  opacity: 1.0
 
-selection:
-  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
-  save_to_clipboard: true
-
+## Cursor
 cursor:
-  style: Underline
+  style:
+    shape: Block
+    blinking: On
 
+  unfocused_hollow: false
+
+## Live config reload
 live_config_reload: true
-draw_bold_text_with_bright_colors: true

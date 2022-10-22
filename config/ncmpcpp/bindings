@@ -84,8 +84,8 @@ def_key "j"
 #def_key "+"
 #  volume_up
 #
-def_key "h"
- previous_column
+#def_key "h"
+# previous_column
 #
 #def_key "left"
 #  master_screen
@@ -285,8 +285,8 @@ def_key "h"
 #def_key "g"
 #  jump_to_position_in_song
 #
-def_key "L"
- show_lyrics
+#def_key "L"
+# show_lyrics
 #
 #def_key "ctrl-v"
 #  select_range

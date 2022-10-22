@@ -1,41 +1,60 @@
-# DIRECTORY
-# ---
+now_playing_prefix = $b$r
+now_playing_suffix = $/r$/b
+current_item_prefix = $r
+current_item_suffix = $/r
+
+# directory
 ncmpcpp_directory = ~/.config/ncmpcpp
-lyrics_directory  = ~/.config/ncmpcpp/lyrics
 mpd_music_dir     = ~/Music
 
-##### various settings #####
-#
-#
-# PROGRESS BAR
-progressbar_look = =>
-progressbar_color = "white"
-progressbar_elapsed_color = "yellow" 
+####
+autocenter_mode = yes
+header_visibility = "yes"
+statusbar_visibility = "yes"
 
-##### colors definitions #####
-colors_enabled = yes
-empty_tag_color = cyan
-#
-header_window_color = default
-volume_color = white
-#
-state_line_color = green
-state_flags_color = default:b
-#
+# # lyrics
+lyrics_directory  = ~/.config/ncmpcpp/lyrics
+# lyrics_fetchers =  internet, metrolyrics, azlyrics, sing365,  justsomelyrics, jahlyrics, plyrics, tekstowo, genius
+
+# # PROGRESS BAR
+#progressbar_look = "___"
+#progressbar_look = "─╼ "
+#progressbar_look = "■  "
+#progressbar_look = "─- "
+#progressbar_look = "▒▒░"
+#progressbar_look = "▒▓░"
+#progressbar_look = "┅┅┄"
+#progressbar_look = "─⊙┄"
+#progressbar_look = "─➞─"
+#progressbar_look = "─┅─"
+#progressbar_look = "▪▪▪"
+#progressbar_look = "▪▪▫"
+#progressbar_look = "───"
+#progressbar_look = "▁▁▁"
+#progressbar_look = "‒‒‒"
+#progressbar_look = "▶ "
+#progressbar_look = "◈◆◇"
+#progressbar_look = "■◣ "
+#progressbar_look = "≈►·"
+#progressbar_look = "▃▃▃"
+#progressbar_look = "○•·"
+#progressbar_look = "───"
+#progressbar_look = "─╼·"
+#progressbar_look = "▤▦"
+progressbar_look = "━■━"
+#progressbar_look = "━|━"
+
+progressbar_color = white
+progressbar_elapsed_color = green
+
+# Color
+colors_enabled = "yes"
+#empty_tag_color = red
+#statusbar_color = blue
+#state_line_color = "black"
+#state_flags_color = "green"
 main_window_color = green
-#
-color1 = white
-color2 = green
-#
-statusbar_color = default
-#
-statusbar_time_color = default:b
-#
-player_state_color = default:b
-alternative_ui_separator_color = green:b
-#
-window_border_color = green
-#
-active_window_border = red
+header_window_color = green
+#main_window_highlight_color = "blue"
 
-external_editor = nvim
+# external_editor = nvim
