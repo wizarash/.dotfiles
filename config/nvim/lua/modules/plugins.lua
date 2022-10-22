@@ -56,7 +56,9 @@ return packer.startup(function(use)
   -- Neo-tree
   use { 'nvim-neo-tree/neo-tree.nvim', requires =  'MunifTanjim/nui.nvim' }
   -- Lualine
-  use { 'nvim-lualine/lualine.nvim' }
+  -- use { 'nvim-lualine/lualine.nvim' }
+  -- Feline
+  use { 'feline-nvim/feline.nvim' }
   -- Bufferline
   use { 'akinsho/nvim-bufferline.lua' }
   -- Indentline
