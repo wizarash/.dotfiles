@@ -67,6 +67,7 @@ return packer.startup(function(use)
   use { 'NvChad/nvim-colorizer.lua' }
   -- Colorscheme
   use { 'themercorp/themer.lua' }
+  use { "EdenEast/nightfox.nvim" }
   -- use { 'glepnir/zephyr-nvim' }
   -- autopairs
   use { 'windwp/nvim-autopairs' }
