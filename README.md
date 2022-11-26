@@ -8,19 +8,26 @@ My personal dotfiles
 - Shell : zsh
 - Editor : neovim
 - File Manager : Ranger
-- 
 
 ## Setup
 
-1. Install Required Dependencies
+<details>
+<br>
+<summary><b>1. Install Required Dependencies</b></summary>
+<br>
 
+- zsh
 - kitty
 - nvim
 - ranger
-- exa
-- zsh
+- exa 
+- mpd 
+- ncmpcpp
+<br>
 
-2. Enable Services
+</details>
+
+<b>2. Enable Services</b>
 
 ```sh
 systemctl --user enable mpd.service
