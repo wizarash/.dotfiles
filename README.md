@@ -28,7 +28,7 @@ My personal dotfiles
 
 clone this repo
 ```sh
-git clone https://github.com/wizarash/dotfiles
+git clone --depth 1 https://github.com/wizarash/dotfiles
 ```
 use rcm to manage your dotfiles
 ```sh
