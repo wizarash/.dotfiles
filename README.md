@@ -2,7 +2,7 @@
 My personal dotfiles
 
 ## My Setup
-- Distro : ?
+- Distro : openSUSE
 - WM : ?
 - Terminal : Kitty
 - Shell : zsh
@@ -16,14 +16,25 @@ My personal dotfiles
 <summary><b>1. Install Required Dependencies</b></summary>
 <br>
 
+- rcm
 - zsh
 - kitty
 - nvim
 - ranger
 - exa 
-- mpd 
+- mpd
 - ncmpcpp
 <br>
+
+clone this repo
+```sh
+git clone https://github.com/wizarash/dotfiles
+```
+use rcm to manage your dotfiles
+```sh
+mv dotfiles ~/.dotfiles
+rcup
+```
 
 </details>
 
