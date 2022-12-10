@@ -105,23 +105,29 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 # Aliases
-alias c="clear"
-alias q="exit"
 
+# exa
 alias l="exa --grid --icons"
 alias ls="exa --grid --icons"
 alias ll="exa --grid -al --icons"
 alias la="exa --grid -a --icons"
 
+# open app
+alias hx ="helix"
 alias v="nvim"
+alias r="ranger"
+alias fetch='neofetch'
+alias music='ncmpcpp'
 
 alias g="git"
 alias graph="git log --all --decorate --oneline --graph"
 
-alias r="ranger"
+# options
+alias q="exit"
+alias :q="exit"
+alias x="exit"
+alias c="clear"
+alias s="clear"
 
-alias fetch='neofetch'
-
-alias music='ncmpcpp'
 ## default 
 export EDITOR=nvim
