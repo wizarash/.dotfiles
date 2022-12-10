@@ -31,6 +31,6 @@ tab_bar_style powerline
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Mocha
+# Ayu Mirage
 include current-theme.conf
 # END_KITTY_THEME
