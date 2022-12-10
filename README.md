@@ -13,17 +13,24 @@ My personal dotfiles
 
 <details>
 <br>
-<summary><b>1. Install Dependencies</b></summary>
+<summary><b>1. Install Required Dependencies and Enable Services</b></summary>
 <br>
 
-- rcm
-- zsh
-- kitty
-- nvim
-- ranger
-- exa 
-- mpd
-- ncmpcpp
+- install rcm, zsh, kitty, exa, nvim, ranger, mpd and ncmpcpp
+```sh
+sudo zypper in rcm zsh kitty nvim ranger exa mpd ncmpcpp
+```
+
+```sh
+systemctl --user enable mpd.service
+systemctl --user start mpd.service
+```
+
+</details>
+
+<details>
+<br>
+<summary><b>2. Install my dotfiles</b></summary>
 <br>
 
 clone this repo
@@ -54,12 +61,4 @@ zsh use ohmyzsh
 ```sh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  
 ```
-
 </details>
-
-<b>2. Enable Services</b>
-
-```sh
-systemctl --user enable mpd.service
-systemctl --user start mpd.service
-```
