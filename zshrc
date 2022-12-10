@@ -113,7 +113,9 @@ alias ll="exa --grid -al --icons"
 alias la="exa --grid -a --icons"
 
 # open app
-alias hx ="helix"
+alias hx="helix"
+alias hl="helix"
+alias nv="nvim"
 alias v="nvim"
 alias r="ranger"
 alias fetch='neofetch'
