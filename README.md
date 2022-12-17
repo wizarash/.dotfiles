@@ -11,7 +11,7 @@
 
 </div>
 
-## My Setup
+## 🌏 Overview :
 - Distro : openSUSE
 - WM : ?
 - Terminal : Kitty
@@ -19,7 +19,7 @@
 - Editor : neovim
 - File Manager : Ranger
 
-## Setup
+## 🛠️ Installation Guide:
 
 <details>
 <br>
@@ -60,13 +60,11 @@ sync dotfiles with rcm
 ```sh
 rcup
 ```
-
-for neovim use nvchad
-```sh
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
-```
-zsh use ohmyzsh
-```sh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  
-```
 </details>
+
+## 🧩 additional :
+
+- [***nvchad***](https://github.com/NvChad/NvChad) ~ blazing fast Neovim config providing solid defaults and a beautiful UI
+- [***ohmyzsh***](https://github.com/ohmyzsh/ohmyzsh) ~ for managing Zsh configuration.
+
+
