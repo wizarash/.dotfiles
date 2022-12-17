@@ -46,11 +46,6 @@ clone this repo
 git clone --depth 1 https://github.com/wizarash/dotfiles.git
 ```
 
-rename directory
-```sh
-mv dotfiles ~/.dotfiles
-```
-
 copy fonts to .local/share/fonts
 ```sh
 cp -r ~/.dotfiles/misc/fonts/* ~/.local/share/fonts/
