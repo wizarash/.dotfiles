@@ -59,7 +59,7 @@ rcup
 
 ## 🧩 additional :
 
-- [***nvchad***](https://github.com/NvChad/NvChad) ~ blazing fast Neovim config providing solid defaults and a beautiful UI
-- [***ohmyzsh***](https://github.com/ohmyzsh/ohmyzsh) ~ for managing Zsh configuration.
-
+- [***NvChad***](https://github.com/NvChad/NvChad) ~ Blazing fast Neovim config providing solid defaults and a beautiful UI
+- [***ohmyzsh***](https://github.com/ohmyzsh/ohmyzsh) ~ For managing Zsh configuration.
+- [***Nerd Fonts***](https://github.com/ryanoasis/nerd-fonts) ~ Iconic font aggregator, collection, and patcher
 
