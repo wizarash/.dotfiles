@@ -25,9 +25,9 @@
 <br>
 <summary><b>1. Install Required Dependencies and Enable Services</b></summary>
 
-- install rcm, zsh, kitty, exa, nvim, ranger, mpd and ncmpcpp
+- install rcm, zsh, kitty, exa, bat, nvim, ranger, mpd and ncmpcpp
 ```sh
-sudo zypper in rcm zsh kitty nvim ranger exa mpd ncmpcpp
+sudo zypper in rcm zsh kitty bat nvim ranger exa mpd ncmpcpp zenith
 ```
 
 ```sh

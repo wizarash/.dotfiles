@@ -111,7 +111,6 @@ alias l="exa --grid --icons"
 alias ls="exa --grid --icons"
 alias ll="exa --grid -al --icons"
 alias la="exa --grid -a --icons"
-
 # open app
 alias hx="helix"
 alias hl="helix"
@@ -120,16 +119,26 @@ alias v="nvim"
 alias r="ranger"
 alias fetch='neofetch'
 alias music='ncmpcpp'
-
+alias cat="bat"
+alias p="tldr"
+#typioca
+alias typioca='~/go/bin/typioca'
+alias typo='~/go/bin/typioca'
+# git
 alias g="git"
 alias graph="git log --all --decorate --oneline --graph"
-
 # options
 alias q="exit"
 alias :q="exit"
 alias x="exit"
 alias c="clear"
 alias s="clear"
-
+alias timer="sh ~/timer.sh"
 ## default 
 export EDITOR=nvim
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+if [ -e /home/wiz/.nix-profile/etc/profile.d/nix.sh ]; then . /home/wiz/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
