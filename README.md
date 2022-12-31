@@ -7,7 +7,7 @@
 
 ![](https://img.shields.io/github/last-commit/wizarash/.dotfiles?color=C9CBFF&logoColor=D9E0EE&labelColor=302D41&style=for-the-badge)
 ![](https://img.shields.io/github/stars/wizarash/.dotfiles?color=C9CBFF&logoColor=D9E0EE&labelColor=302D41&style=for-the-badge)
-[![](https://img.shields.io/github/repo-size/wizarash/.dotfiles?color=%23DDB6F2&label=SIZE&logo=codesandbox&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41)](https://github.com/wizarash/.dotfiles)
+![](https://img.shields.io/github/repo-size/wizarash/.dotfiles?color=%23DDB6F2&label=SIZE&logo=codesandbox&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41)
 
 </div>
 
